@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+
+
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: black;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(65, 65, 65);
+    border-radius: 20px;
+    border: 3px solid rgb(65, 65, 65);
+}
+
+
+
+
+.cabecalho {
+    display: flex;
+    position: fixed; /* fixa a barra de navegação */
+    width: 100%;
+    height: 60px;/*90px*/
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: black;
+    color: white;
+    z-index: 1;
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item:link {
+   color: white;
+}
+
+.cabecalho-menu-item:visited {
+   color: white;
+}
+
+.cabecalho-menu-item:hover {
+   color: rgb(0, 190, 255);
+}
+
+.cabecalho-menu-item:active {
+   color: gainsboro;
+}
+
+
+
+
+.conteudo {
+    border-top: 1px solid; /* linha do cabecalho */
+    padding-top: 200px;
+    margin-bottom: 200px;
+}
+
+.conteudo-home {
+    display: flex;
+    justify-content: center;
+    gap: 285px;
+    align-items: center;
+    margin-bottom: 400px; /*define a distância entre a primeira e segunda página*/
+}
+
+.conteudo-home-escrito-descricao {
+    font-size: 20px;
+}
+
+.conteudo-home-escrito-nome {
+    font-size: 70px;
+    text-indent: 60px;
+    padding-right: 80px;
+}
+
+.conteudo-home-escrito-sobrenome {
+    font-size: 16px;
+    text-align: right;
+    text-indent: 100px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.conteudo-habilidades {
+    display: flex;
+    background-color: gray;
+    height: 500px;
+    flex-direction: column;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    padding: 15px 30px;
+    margin-bottom: 300px; /*distância entre a página de habilidades e a de projetos*/
+}
+
+#conteudo-habilidades:target {
+    scroll-margin-top: 140px; /*define a distância do top ao realizar um link com target da própria página, nesse caso dos elementos da página de habilidades*/
+}
+
+.conteudo-habilidades-titulo {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 550px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.conteudo-habilidades-icones {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 5px;
+    padding: 2px 0;
+    margin-left: 4% ;
+    margin-bottom: 0.3%;
+    width: 130px;
+}
+
+.conteudo-habilidades-icones img {
+    width: 25px;
+}
+
+.conteudo-habilidades-escrito {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-self: center;
+    align-items: center;
+}
+
+.conteudo-habilidades-domino {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 300px;
+    width: 550px;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.conteudo-habilidades-objetivos {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 300px;
+    width: 550px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: justify;
+}
+
+
+
+
+.conteudo-projetos {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    padding: 15px 30px;
+    border-top: 5px dashed rgba(128, 128, 128, 0.4);
+    border-bottom: 5px dashed rgba(128, 128, 128, 0.4);
+    margin-bottom: 300px;
+}
+
+#conteudo-projetos:target {
+    scroll-margin-top: 140px; /*define a distância do top ao realizar um link com target da própria página, nesse caso dos elementos da página de projetos*/
+}
+
+.conteudo-projetos-titulo {
+    display: flex;
+    width: 550px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    align-self: center;
+}
+
+.conteudo-projetos-corpo {
+    display: flex;
+    background-color: black;
+    margin-top: 50px;
+    border-radius: 15px;
+    gap: 115px;
+    justify-content: center;
+    height: 350px;
+    width: 90%;
+    align-self: center;
+    align-items: center;
+}
+
+.conteudo-projetos-corpo-capsulas {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: gray;
+    align-items: center;
+    overflow: hidden;
+}
+
+.conteudo-projetos-corpo-capsulas div {
+    font-weight: 900;
+    text-align: center;
+    background-color: rgba(0, 190, 255, 0.60);
+    align-self: center;
+    width: 100%;
+    transform: rotate(-45deg);
+    z-index: 0;
+}
+
+.capsula-down {
+    transform: translatey(0px);
+    animation: vertical-down 5s ease-in-out infinite;
+}
+
+.capsula-up {
+    transform: translatey(0px);
+    animation: vertical-up 5s ease-in-out infinite;
+}
+
+@keyframes vertical-down {
+    0% {
+        transform: translatey(10px);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(10px);
+    }
+} 
+
+@keyframes vertical-up {
+    0% {
+        transform: translatey(-10px);
+    }
+    50% {
+        transform: translatey(10px);
+    }
+    100% {
+        transform: translatey(-10px);
+    }
+} 
+
+
+
+
+.conteudo-contatos {
+    display: flex;
+    height: 500px;
+    flex-direction: row;
+    padding: 15px 30px;
+    justify-content: center;
+}
+
+#conteudo-contatos:target {
+    scroll-margin-top: 140px; /*define a distância do top ao realizar um link com target da própria página, nesse caso dos elementos da página de contatos*/
+}
+
+.conteudo-contatos-corpo{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    align-self: center;
+    border-radius: 15px;
+}
+
+.conteudo-contatos-corpo-titulo{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    border-bottom: 2px dashed rgb(0, 190, 255); /*linha abaixo do contate-me*/
+    margin-top: 5%;
+    padding-bottom: 5%;
+    width: 450px;
+    align-self: center;
+    color: white;
+}
+
+.conteudo-contatos-corpo-icones{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 12%;
+    gap: 5%;
+}
+
+.conteudo-contatos-corpo-icones-unidades {
+    width: 45px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: 150px;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.footer-dados {
+    color: white;
+    text-indent: 15px;
+    padding-top: 15px;
+}
+
+.footer-creditos {
+    color: white;
+    text-align: right;
+    align-self: flex-end;
+    vertical-align: bottom;
+    padding: 35px;
+}
+
+.footer-dados-conteudo-interno {
+    text-indent: 25px;
+}
+
+.footer-dados-conteudo {
+    margin-top: 25px;
+}
